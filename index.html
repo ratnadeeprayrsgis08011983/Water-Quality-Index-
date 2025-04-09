@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Water Quality Index Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>WATER QUALITY INDEX CALCULATOR</h1>
+
+    <div class="form-section">
+      <div class="left-section">
+        <label>Station</label>
+        <input type="text" id="station">
+
+        <label>Sub-Station</label>
+        <input type="text" id="substation">
+      </div>
+
+      <div class="middle-section">
+        <label>pH</label>
+        <input type="number" id="ph">
+        <label>TDS</label>
+        <input type="number" id="tds">
+        <label>TSS</label>
+        <input type="number" id="tss">
+        <label>BOD</label>
+        <input type="number" id="bod">
+        <label>Fluoride</label>
+        <input type="number" id="fluoride">
+        <label>Nitrate</label>
+        <input type="number" id="nitrate">
+        <label>Chloride</label>
+        <input type="number" id="chloride">
+        <label>Total Alkalinity</label>
+        <input type="number" id="totalalkalinity">
+        <label>Total Hardness</label>
+        <input type="number" id="totalhardness">
+      </div>
+
+      <div class="right-section">
+        <label>WQI</label>
+        <div id="wqi-box" class="output-box"></div>
+        <label>Status</label>
+        <div id="status-box" class="output-box"></div>
+      </div>
+    </div>
+
+    <div class="button-section">
+      <button id="calculate">Calculate WQI</button>
+      <button id="exportPdf">Export to PDF</button>
+    </div>
+  </div>
+
+  <!-- jsPDF CDN + Global Mapping -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    window.jsPDF = window.jspdf.jsPDF;
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
